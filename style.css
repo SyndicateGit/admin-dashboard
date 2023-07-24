@@ -1,0 +1,111 @@
+/*Alignment and Size*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr;
+
+  /*Stretch container to fullscreen*/
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header{
+  grid-area: 1/2/2/-1;
+}
+
+.dashboard{
+  grid-area: 1/1/-1/2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  
+  padding: 10px;
+}
+
+.dashboard .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard .options{
+  margin-left: 5px;
+}
+
+.dashboard .settings{
+  margin-left: 5px;
+}
+
+.dashboard *>*{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3%;
+}
+
+
+.content{
+  grid-area: 2/2/-1/-1;
+}
+
+
+/*Design*/
+/*Color pallete: https://palettes.shecodes.io/palettes/6*/
+
+.dashboard{
+  background-color: #ffaaa5;
+
+  /*White text*/
+  color: white;
+}
+
+/*Logo Image*/
+.svg{
+  /*Change to white*/
+  cursor: pointer;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 3rem;
+}
+
+
+.dashboard .logo .svg{
+  height: 3rem;
+}
+
+.dashboard .logo h3{
+  cursor: pointer;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.dashboard * .svg{
+  cursor: pointer;
+  height: 1.7rem;
+}
+
+.dashboard *>*{
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.header{
+  background-color: white;
+}
+
+/*Reactive Elements*/
+.dashboard *>*:hover{
+  text-decoration: underline;
+}
