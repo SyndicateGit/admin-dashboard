@@ -1,4 +1,4 @@
-/*Alignment and Size*/
+/*Alignment and Size and background color*/
 *{
   box-sizing: border-box;
   padding: 0;
@@ -36,35 +36,41 @@
   background-color: white;
   grid-area: 1/1/2/2;
 
-  display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   align-items: center;
   justify-items: start;
 }
 
 
 .header .search .bar{
-  grid-area: 1/1/2/2;
   display: flex;
-  gap: 5px;
+  flex-grow: 1;
+  gap: 1rem;
 }
 
 
 .header .search .bar input{
   border-radius: 20px;
-  background-color: #E8E8E8;
-  width: clamp(200px, 30vw, 80vw);
+  background-color: #ffd3b6;
+  width: clamp(200px, 80%, 40vw);
+
 }
 
+.header .search .bar .input{
+  flex-grow: 1;
+} 
 
-.header .bell{
-  grid-area: 1/3/-1/-1;
-}
+
 
 .header .mini{
   background-color: white;
   grid-area: 1/2/2/-1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
 }
 
 .header .main{
@@ -82,9 +88,11 @@
 
   display: flex;
   flex-direction: column;
-  gap: 3%;
-  
+  gap: 1rem;
+
   padding: 10px;
+
+  width: max(250px, 20vw);
 }
 
 .dashboard .logo{
@@ -164,7 +172,26 @@
   background-color: white;
 }
 
+/*Makes pfp circle with image in center*/
+.pfp {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.name{
+  cursor: pointer;
+}
+
 /*Reactive Elements*/
 .dashboard *>*:hover{
   text-decoration: underline;
 }
+
+
