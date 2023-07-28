@@ -148,9 +148,76 @@
 .content{
   background-color: whitesmoke	;
   grid-area: 2/2/-1/-1;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+  gap:10px
 }
 
+.content .projects-container{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto 1fr 1fr;
+  gap: 1rem;
+  grid-auto-flow: column;
+}
 
+.content .projects{
+  grid-area: 1/1/-1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.content h2{
+  margin-left: 8px;
+}
+
+.content .project p{
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+/*Project Cards*/
+.content .project{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  padding: 10px;
+
+  border: solid 0.1em lightgray;
+  border-left: #a8e6cf 10px solid;
+}
+
+.content .project .icons{
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  flex: 0;
+}
+
+.content .project .icons img{
+  width: 1.5rem;
+}
+
+.content .project h3{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.content .announcements{
+  grid-area: 1/2/2/-1;
+}
+
+.content .trending{
+  grid-area: 2/2/-1/-1;
+}
 /*Design*/
 /*Color pallete: https://palettes.shecodes.io/palettes/6*/
 
@@ -226,6 +293,10 @@
   background-size: cover;
 }
 
+/*profiles in content*/
+.content .pfp{
+
+}
 
 .name{
   cursor: pointer;
