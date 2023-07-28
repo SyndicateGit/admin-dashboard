@@ -153,7 +153,10 @@
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 10px;
-  gap:10px
+  gap:10px;
+
+  background-image: url(/profiles/lavendar.jpg);
+  background-size: 120%;
 }
 
 .content .projects-container{
@@ -203,6 +206,7 @@
 
 .content .project .icons img{
   width: 1.5rem;
+  cursor: pointer;
 }
 
 .content .project h3{
@@ -271,7 +275,7 @@
 .header-btn{
   cursor: pointer;
   color: white;
-  background-color: #ffd3b6;
+  background-color: #ffaaa5;
   border: none;
   width: 6rem;
   height: 2rem;
@@ -293,9 +297,9 @@
   background-size: cover;
 }
 
-/*profiles in content*/
-.content .pfp{
-
+.content h2{
+  color: white;
+  cursor: pointer;
 }
 
 .name{
